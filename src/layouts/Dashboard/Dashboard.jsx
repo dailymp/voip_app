@@ -67,11 +67,24 @@ class App extends React.Component {
   }
   render() {
     const { classes, ...rest } = this.props;
+    /*     let sideBarVisible;
+        if (props.location.pathname !== 'upgrade-to-pro') {
+          sideBarVisible = <Sidebar
+            routes={dashboardRoutes}
+            logoText={"Solinfpro Team"}
+            logo={logo}
+            image={image}
+            handleDrawerToggle={this.handleDrawerToggle}
+            open={this.state.mobileOpen}
+            color="blue"
+            {...rest}
+          /> 
+        }*/
     return (
       <div className={classes.wrapper}>
         <Sidebar
           routes={dashboardRoutes}
-          logoText={"Creative Tim"}
+          logoText={"Solinfpro Team"}
           logo={logo}
           image={image}
           handleDrawerToggle={this.handleDrawerToggle}
@@ -91,8 +104,8 @@ class App extends React.Component {
               <div className={classes.container}>{switchRoutes}</div>
             </div>
           ) : (
-            <div className={classes.map}>{switchRoutes}</div>
-          )}
+              <div className={classes.map}>{switchRoutes}</div>
+            )}
           {this.getRoute() ? <Footer /> : null}
         </div>
       </div>

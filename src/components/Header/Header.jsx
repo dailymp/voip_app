@@ -30,29 +30,35 @@ function Header({ ...props }) {
   const appBarClasses = classNames({
     [" " + classes[color]]: color
   });
+  let render;
+  if (props.location.pathname !== '/upgrade-to-pro') {   
+    render =
+      <AppBar className={classes.appBar + appBarClasses}>
+        <Toolbar className={classes.container}>
+          <div className={classes.flex}>
+            <Button color="transparent" href="#" className={classes.title}>
+              {makeBrand()}
+            </Button>
+          </div>
+          <Hidden smDown implementation="css">
+            <HeaderLinks />
+          </Hidden>
+          <Hidden mdUp implementation="css">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={props.handleDrawerToggle}
+            >
+              <Menu />
+            </IconButton>
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+  }
+  else render = <div className="div">Login Page</div>
+
   return (
-    <AppBar className={classes.appBar + appBarClasses}>
-      <Toolbar className={classes.container}>
-        <div className={classes.flex}>
-          {/* Here we create navbar brand, based on route name */}
-          <Button color="transparent" href="#" className={classes.title}>
-            {makeBrand()}
-          </Button>
-        </div>
-        <Hidden smDown implementation="css">
-          <HeaderLinks />
-        </Hidden>
-        <Hidden mdUp implementation="css">
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={props.handleDrawerToggle}
-          >
-            <Menu />
-          </IconButton>
-        </Hidden>
-      </Toolbar>
-    </AppBar>
+   render
   );
 }
 

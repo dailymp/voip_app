@@ -1,7 +1,7 @@
 {
   "name": "material-dashboard-react",
   "version": "1.5.0",
-  "description": "Material Dashboard React. Coded by Creative Tim",
+  "description": "Material Dashboard React. Coded by Solinfpro",
   "private": false,
   "main": "dist/index.js",
   "dependencies": {
@@ -37,12 +37,12 @@
     "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
   },
   "keywords": [],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Daily Miranda Pardo (https://www.solinfpro.es/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
+    "url": "https://git.heroku.com/guarded-tundra-86248.git"
   },
-  "homepage": "https://creativetimofficial.github.io/material-dashboard-react/#/dashboard",
+  "homepage": "https://guarded-tundra-86248.herokuapp.com/dashboard",
   "optionalDependencies": {
     "babel-eslint": "7.2.3",
     "eslint": "4.19.1",
